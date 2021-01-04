@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(images/tile.jpg);
+}
+#alr {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 500px;
+    background-color: aqua;
+}
+p {
+    padding: 85px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+.ok {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 15%;
+    color: aquamarine;
+    background-color: blue;
+    font-size: 24px;
+    text-align: center;
+}
+.container1 {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 50% 40%;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+header {
+    color: #ff66b3
+;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/5;
+    font-size: 30px;
+    /* font from google font: */
+    font-family: 'Permanent Marker', cursive;
+}
+main {  
+    display: flex;
+    background-image: url(images/formbg.jpg);
+    background-size: contain;
+    grid-column: 2/5;
+    justify-content: center;
+    padding: 15px;
+    overflow: auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px red;
+}
+#dataTask {
+    height: 30%;
+    margin-top: 15px;
+    color: blueviolet;
+    border: 2px solid blue;
+    font-size: 20px;
+    background-color: inherit;
+    resize: none;
+}
+::placeholder {
+    color:rgb(17, 17, 17);
+    padding-top: 15px;
+    font-weight: bold;
+}
+input {
+    color: blueviolet;
+    border: inherit;
+    background-color: inherit;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 50px;
+}
+#sendTask, #resetTask {
+    font-size: 20px;
+    width: 200px;
+    height: 70px;
+    color: aliceblue;
+}
+#sendTask {
+    background-color: rgb(216, 27, 27);
+}
+#resetTask {
+    background-color: rgb(44, 25, 151);
+}
+#sendTask:hover, #resetTask:hover,.ok:hover {
+    background-color: #3e8e41;
+}
+footer {
+    grid-column: span 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: flex-start;
+    width: 95vw;
+}
+.noteShow {
+    position: relative;
+    background-image: url(images/notebg.png);
+    background-size: cover;
+    padding: 3px;
+    margin-top: 10px;
+    margin-left: 8px;
+    width: 19%;
+    height: 90%;
+    animation: fadeInAnimation ease 5s;
+    overflow: auto;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.text ,.day,.time{
+    font-size: larger;
+    color: blue;
+}
+.text {
+    height: 55%;
+    overflow: auto;
+    padding: 20px;
+    margin: 25px;
+    margin-bottom: 5px;
+}
+.day,.time {
+    height: 7%;
+    padding-left: 25px;
+    margin: 5px auto;
+}
+.material-icons {
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.noteShow:hover .material-icons {
+    display: block;
+}
